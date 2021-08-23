@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KGC 인삼공사</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/spwiper.min.css"/>
+    <script defer src="src/common.js"></script>
+    <script defer src="src/canvas.js"></script>
+    <script defer src="src/aside.js"></script>
+    <script defer src="src/dragEvent.js"></script>
+    <script defer src="src/video_click.js"></script>
+    <script defer src="src/con4_animation.js"></script>
+    <script defer src="src/con3_Event.js"></script>
+</head>
+<body>
+    <header></header>
+
+    <main id="main">
+        <section class="main_video">
+            <video src="img/mainVideo.mp4" autoplay muted loop></video>
+            <canvas id="canvas_left_prev" class="canvas_left prev" width="1920" height="1080">이 브라우저는 비디오를 지원하지 않습니다</canvas>
+            <div class="slides">
+                <a data-menu="menu1">
+                    <div class="title">
+                        <h1><small>HEALTH</small></h1>
+                        <h2>인류를 위한 건강한 미래</h2>
+                    </div>
+                    <div class="banner item1">
+                        <div class="back item1">
+                            <div id="timer" class="timer item1"></div>
+                        </div>
+                        <div class="desc item1">
+                            <h3 id="little_title" >HEALTH</h3>
+                            <p id="sub_text">KGC인삼공사의 주력 사업분야로 인류를 위한다는 숭고한 가치를 품고 있습니다</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" data-menu="menu2">
+                    <div class="title">
+                        <h1><small>BEAUTY</small></h1>
+                        <h2>내면과 외면을 아우르는 아름다움</h2>
+                    </div>
+                    <div class="banner item2">
+                        <div class="back item2">
+                            <div id="timer" class="timer item2"></div>
+                        </div>
+                        <div class="desc item2">
+                            <h3 id="little_title">BEAUTY</h3>
+                            <p id="sub_text">KGC인삼공사의 주력 사업분야로 인류를 위한다는 숭고한 가치를 품고 있습니다</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" data-menu="menu3">
+                    <div class="title">
+                        <h1><small>GLOBAL</small></h1>
+                        <h2>세계인을 위한 종랍 건강 &뷰티 기업</h2>
+                    </div>
+                    <div class="banner item3">
+                        <div class="back item3">
+                            <div id="timer" class="timer item3"></div>
+                        </div>
+                        <div class="desc item3">
+                            <h3 id="little_title">GLOBAL</h3>
+                            <p id="sub_text">KGC인삼공사의 주력 사업분야로 인류를 위한다는 숭고한 가치를 품고 있습니다</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" data-menu="menu4">
+                    <div class="title">
+                        <h1><small>HERITAGE</small></h1>
+                        <h2 >최고를 향해 지켜온 120여년의 가치</h2>
+                    </div>
+                    <div class="banner item4">
+                        <div class="back item4">
+                            <div id="timer" class="timer item4"></div>
+                        </div>
+                        <div class="desc item4">
+                            <h3 id="little_title">HERITAGE</h3>
+                            <p id="sub_text">KGC인삼공사의 주력 사업분야로 인류를 위한다는 숭고한 가치를 품고 있습니다</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+        
+        <div id="con2_cursor" class="con2_cursor">
+            <div class="r"></div>
+        </div>
+        <section id="con2" class="con2 container swiper-container">
+            <h2><a href="#">사업분야 & 브랜드</a></h2>
+            <div id="swiper-wrapper" class="flex_img item_list swiper-wrapper">
+                <figure class="item swiper-slide">
+                    <img src="img/con1/311bee34-bc52-4714-a7da-e9b37e4d8be3.png" alt="">
+                    <div class="back_color"></div>
+                    <h3 class="back_img">
+                        <img src="img/con1/25f51ca1-e115-45de-9564-c873af2e970b.png" alt="">
+                    </h3>
+                    <figcaption>세계인의 건강을 위한 120여년의 철학, <br> 대한민국 대표 브랜드 '정관장'</figcaption>
+                </figure>
+                <figure class="item swiper-slide">
+                    <img src="img/con1/da075419-2ff2-4750-862c-bbb6cecc5b13.jpg" alt="">
+                    <div class="back_color"></div>
+                    <h3 class="back_img">
+                        <img src="img/con1/7a532b19-b9d2-4caf-aa55-54f475e1ec92.png" alt="">
+                    </h3>
+                    <figcaption>매일 채우는 좋은 에너지, '굿베이스'</figcaption>
+                </figure>
+                <figure class="item swiper-slide">
+                    <img src="img/con1/8f107923-7b43-457e-becb-8841d0ca3197.png" alt="">
+                    <div class="back_color"></div>
+                    <h3 class="back_img">
+                        <img src="img/con1/a8ec3a07-c3c6-40bc-909e-374171d26ad0.png" alt="">
+                    </h3>
+                    <figcaption>녹용의 원픽을 세우다, <br> 하늘이 내려준 귀한 녹용 '천녹'</figcaption>
+                </figure>
+                <figure class="item swiper-slide">
+                    <img src="img/con1/5ed264d2-f2aa-4233-815d-e7e9334f0670.png" alt="">
+                    <div class="back_color"></div>
+                    <h3 class="back_img">
+                        <img src="img/con1/0c503f80-5ce8-4e20-afd6-63ed25513a69.png" alt="">
+                    </h3>
+                    <figcaption>당신을 위한 스마트 헬스 솔루션, '알파프로젝트'</figcaption>
+                </figure>
+                <figure class="item swiper-slide">
+                    <img src="img/con1/8a06f7f9-32a9-4e79-9cfa-67f00e2f8edc.jpg" alt="">
+                    <div class="back_color"></div>
+                    <h3 class="back_img">
+                        <img src="img/con1/12022c88-4a9d-4ec7-abef-d53c78d3f0e2.png" alt="">
+                    </h3>
+                    <figcaption>불필요한 것은 빼고 필요한 것은 채워드립니다, <br>'굿베이스 에센셜케어</figcaption>
+                </figure>
+                <figure class="item swiper-slide">
+                    <img src="img/con1/06ce2c5a-63e1-49c4-b28d-629f0108ba4f.png" alt="">
+                    <div class="back_color"></div>
+                    <h3 class="back_img">
+                        <img src="img/con1/a6b1a725-f5e3-4731-83c5-381d721848a2.png" alt="">
+                    </h3>
+                    <figcaption>매일 먹는 면연력, <br>반려동물을 위한 프리미엄 건강식, '지니펫' </figcaption>
+                </figure>
+                <figure class="item swiper-slide">
+                    <img src="img/con1/58a06d22-9af4-48d4-9c8d-badd6756e75a.png" alt="">
+                    <div class="back_color"></div>
+                    <h3 class="back_img">
+                        <img src="img/con1/9c01ac67-68d4-4f45-bb46-f1f88cd81878.png" alt="">
+                    </h3>
+                    <figcaption>일상에서 홍삼을 즐길 수 있는 라이프스타일 카페, <br> '사푼사푼'</figcaption>
+                </figure>
+                <figure class="item swiper-slide">
+                    <img src="img/con1/c92f42fa-c58e-4422-9cd1-b5e1371a7de3.jpg" alt="">
+                    <div class="back_color"></div>
+                    <h3 class="back_img">
+                        <img src="img/con1/b22247ec-8eb1-40db-b288-32656a076534.png" alt="">
+                    </h3>
+                    <figcaption>한 뿌리 한 방울 응축의 힘이 <br> 피부에 선사하는 뿌리의 선물, '동인비'</figcaption>
+                </figure>
+                <figure class="item swiper-slide">
+                    <img src="img/con1/9beccfe8-4dd3-49c8-b1aa-0fb23db516d7.png" alt="">
+                    <div class="back_color"></div>
+                    <h3 class="back_img">
+                        <img src="img/con1/1a9c57f8-e159-485d-bc99-c770447149e4.png" alt="">
+                    </h3>
+                    <figcaption>홍상의 가치를 아름다움으로 승화하다, <br> 오감으로 경험하는 홍상 스파 'SPA 1899'</figcaption>
+                </figure>
+            </div>
+        </section>
+        <div class="sec3_link">
+            <div class="link_box">
+                <a href="#" class="link_arrow">정관장몰 바로가기</a>
+            </div>
+        </div>
+        
+
+        <div id="con3_cursor" class="con3_cursor">
+            <div class="con3_arr_left"></div>
+            <div class="con3_arr_right"></div>
+        </div>
+        <section class="con3 swiper-container">
+            <div id="con3_left_content" class="left_content ">
+                <div class="swiper-wrapper">
+                    <div class="back1 swiper-slide" data-meta="1" data-click="0"></div>
+                    <div class="back2 swiper-slide" data-meta="2" data-click="1"></div>
+                    <div class="back3 swiper-slide" data-meta="3" data-click="2"></div>
+                    <div class="back4 swiper-slide" data-meta="4" data-click="3"></div>
+                    <div class="back5 swiper-slide" data-meta="0" data-click="4"></div>
+                </div>
+                <div class="swiper-pagination double"></div>
+                <h2><a href="#">연구개발</a></h2>
+                <p class="text">
+                    세계인의 건강과<br>
+                    행복 실현을 위하여<br>
+                    끊임없이 연구합니다.
+                </p>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="right_content ">
+                <div id="right_content" class="container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide rigth_slide1"></div>
+                        <div class="swiper-slide rigth_slide2"></div>
+                        <div class="swiper-slide rigth_slide3"></div>
+                        <div class="swiper-slide rigth_slide4"></div>
+                        <div class="swiper-slide rigth_slide5"></div>
+                    </div>
+                </div>
+                <div class="subs">
+                    <h2>제품 분야</h2>
+                    <p class="subs_text">최고를 향해 바른길을 걷기 위하여</p>
+                    <p class="color_font product">차별화된 제품개발 기술과 신소재 발굴로 혁신을 이룹니다.</p>
+                    <div class="more_box">
+                        <a href="#" class="more_arrow">자세히 보기</a>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <section class="con4">
+            <div class="con4_frame">
+                <h2><a href="#">KGC소식</a></h2>
+                <div class="con4_content">
+                    <div id="left_sticky" class="left_sticky">
+                        <a href="#">
+                            <figure><img src="img/con3/47ac63ad-0f6b-4252-9fcd-1f1b4b528e65.jpg" alt=""></figure>
+                            <span class="label">KGC소식</span> <span class="badge"></span>
+                            <h3>정관장 굿베이스, 신선한 제철 원료로 만든 건강즙 3종 출시</h3>
+                            <span class="more_btn">자세히 보기</span>
+                        </a>
+                    </div>
+
+                    <div class="right_news">
+                        <ul id="news" class="news">
+                            <li>
+                                <a href="#">
+                                    <figure><img src="img/con3/d0a48609-4d51-426d-9662-9990f05c0c1c.jpg" alt=""></figure>
+                                    <span class="label">KGC소식</span> <span class="badge"></span>
+                                    <h3>정관장몰, 회원 100만명 돌파와 4주년 기념 고객감사 페스티벌</h3>
+                                    <span class="date">2021.7.28</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <figure><img src="img/con3/4e5e13de-40c4-438e-9d1a-9ef92ed461e5.jpg" alt=""></figure>
+                                    <span class="label">KGC소식</span> <span class="badge"></span>
+                                    <h3>정관장, 홍삼의 깐깐한 품지로간리로 비타민,프로바이오틱스 등 신제품 출시</h3>
+                                    <span class="date">2021.7.19</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <figure><img src="img/con3/ee85c4fd-d4cc-4c8a-9711-490b69302ebc.jpg" alt=""></figure>
+                                    <span class="label">KGC소식</span> <span class="badge"></span>
+                                    <h3>정관장 동인비, 동남아 최대 온라인 플랫폼 라자다 입점... 글로벌 시장 진출 가속화</h3>
+                                    <span class="date">2021.6.17</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <figure><img src="img/con3/95f9fdb2-266a-4627-aead-013e529b8fb2.jpg" alt=""></figure>
+                                    <span class="label">KGC소식</span> <span class="badge"></span>
+                                    <h3>정관장 에브리타임 모델로 '송강'발탁</h3>
+                                    <span class="date">2021.4.28</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <figure><img src="img/con3/9fccc4fc-ea0b-45a3-aa80-d58a0cd94135.jpg" alt=""></figure>
+                                    <span class="label">KGC소식</span> <span class="badge"></span>
+                                    <h3>정관장, '오월, 가족을 지키는 힘 사랑 가득 면역력' 프로모션 진행</h3>
+                                    <span class="date">2021.4.22</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <figure><img src="img/con3/a05fc6de-7143-41ba-a048-83da149c28d9.jpg" alt=""></figure>
+                                    <span class="label">KGC소식</span> <span class="badge"></span>
+                                    <h3>KGC인삼공사, 사회복지공동모금회에 8억원 상당 홍삼 기부</h3>
+                                    <span class="date">2021.2.26</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <figure><img src="img/con3/59f656ec-f60d-41f6-bdc6-1c942d5a73d1.jpg" alt=""></figure>
+                                    <span class="label">KGC소식</span> <span class="badge"></span>
+                                    <h3>정관장, 설명절을 위한 다양한 이벤트 진행</h3>
+                                    <span class="date">2021.2.8</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <figure><img src="img/con3/2da17487-c996-4973-a491-86d7544fc653.png" alt=""></figure>
+                                    <span class="label">KGC소식</span> <span class="badge"></span>
+                                    <h3>정관장, '올 설에는 면역력을 선물하세요'</h3>
+                                    <span class="date">2021.1.15</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <figure><img src="img/con3/0c73bdf1-7af0-495c-bb33-36c353ef3431.png" alt=""></figure>
+                                    <span class="label">KGC소식</span> <span class="badge"></span>
+                                    <h3>KGC인삼공사, 소비자중심경영(CCM) 6회 연속 인증 획득</h3>
+                                    <span class="date">2020.12.30</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <div id="con5_cursor" class="con5_cursor">
+            <div class="arr_left"></div>
+            <div class="arr_right"></div>
+        </div>
+        <section class="con5">
+            <h2 class="big_title"><a href="#">온라인 견학</a></h2>
+            <div class="con5_frame slide_wrap">
+                <div class="video_frame hide slide_box">
+                    <div class="hide_box"></div>
+                    <figure class="slide_list clearfix">
+                        <div class="slide_content slide01">
+                            <video src="img/mainVideo.mp4#t=01:48, 01:55" autoplay muted loop></video>
+                        </div>
+                        <div class="slide_content slide02">
+                            <video src="img/mainVideo.mp4#t=0:01:24, 0:01:31" autoplay muted loop></video>
+                        </div>
+                    </figure>
+                    <div class="slide_btn_prev prev_btn"></div>
+                    <div class="slide_btn_next next_btn"></div>
+                    <h2 class="title1 current">고려인삼의 역사와 전통을 한눈에</h2>
+                    <h1 class="title2 current">원주공장 & 홍보관</h1>
+                    <h2 class="title1 prev">고려인삼의 역사와 전통을 한눈에</h2>
+                    <h1 class="title2 prev">부여공장 & 인삼박물관</h1>
+                    <div class="href_box">
+                        <div class="experience">
+                            <a href="#">360° 체험하기</a>
+                        </div>
+                        <div class="anmelden">
+                            <a href="#">견학 신청하기</a>
+                        </div>
+                    </div>
+                    <div class="indigate">
+                        <div class="left active"></div>
+                        <div class="right"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <aside id="quickMenu">
+        <a class="btn-open" href="#">
+            <i></i>
+            <span class="label">열기</span>
+        </a>
+        <ul class="side_menu">
+            <li>
+                <a href="#">
+                    <i class="mall"></i>
+                    <span>정관장몰</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="cs"></i>
+                    <span>고객센터</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="location"></i>
+                    <span>매장찾기</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <script src="src/swiper-5.2.1.min.js"></script>
+</body>
+</html>
+

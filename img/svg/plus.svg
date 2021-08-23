@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        opacity: 0.4;
+      }
+    </style>
+  </defs>
+  <g id="ico_plus" transform="translate(-229 5.957)">
+    <rect id="Rectangle_2293" data-name="Rectangle 2293" class="cls-1" width="24" height="24" transform="translate(229 -5.957)"/>
+    <g id="Group_47" data-name="Group 47" transform="translate(235)">
+      <rect id="Rectangle_24" data-name="Rectangle 24" width="2" height="12" transform="translate(5 0.043)"/>
+      <rect id="Rectangle_25" data-name="Rectangle 25" width="12" height="2" transform="translate(0 5.043)"/>
+    </g>
+  </g>
+</svg>

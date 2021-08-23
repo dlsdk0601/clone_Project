@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        opacity: 0.2;
+      }
+    </style>
+  </defs>
+  <g id="facebook_nor" transform="translate(-1586 -171)">
+    <rect id="Rectangle_2287" data-name="Rectangle 2287" class="cls-1" width="32" height="32" transform="translate(1586 171)"/>
+    <path id="facebook" d="M237.732,171.863V163.2h2.909l.436-3.378h-3.345v-2.156c0-.978.272-1.644,1.674-1.644H241.2V153a23.948,23.948,0,0,0-2.606-.133c-2.579,0-4.344,1.574-4.344,4.465v2.491h-2.917V163.2h2.917v8.667Z" transform="translate(1365.675 24.137)"/>
+  </g>
+</svg>

@@ -1,0 +1,66 @@
+.nice-select {
+    border: solid 1px #b3b3b3;
+}
+
+
+.nice-select.open, .nice-select:active, .nice-select:focus {
+    border-color: #b1b1b1;
+}
+.nice-select:after {
+    border-color: #333;
+    -webkit-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+.nice-select .list {
+    background-color: #f2f2f2;
+    border: 1px solid #b3b3b3;
+}
+
+.nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
+    background-color: #fff;
+}
+
+
+.nice-select .list::-webkit-scrollbar {
+    display:none;
+    width:0;
+}
+
+.nice-select .list::-webkit-scrollbar-track {
+    background-color: #f2f2f2;
+}
+
+.nice-select .list::-webkit-scrollbar-track-piece {
+    background-color: #f2f2f2;
+}
+ 
+.nice-select .list::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background-color: #b3b3b3;
+}
+
+.nice-select .list::-webkit-scrollbar-button {
+    background-color: #b3b3b3;
+    width: 5px;
+    height: 5px;
+}
+
+.nice-select .list::-webkit-scrollbar-button:start {
+    background-color: #f2f2f2;
+    /* Top, Left 방향의 이동버튼 */
+}
+
+.nice-select .list::-webkit-scrollbar-button:end {
+    background-color: #f2f2f2;
+    /* Bottom, Right 방향의 이동버튼 */
+}
+
+.nice-select .list::-webkit-scrollbar-corner {
+    background-color: #f2f2f2;
+    /* 우측 하단의 코너 부분 */
+}
+
+.nice-select .list::-webkit-resizer {
+    background-color: #f2f2f2;
+}
