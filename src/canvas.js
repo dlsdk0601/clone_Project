@@ -16,8 +16,7 @@ let left_endpoint;
 let right_startpoint;
 let xPos1 = 0;
 let xpos2 = 0;
-
-
+video.currentTime = 19;
 
 //Function-----------------------------------------------
 function bannerActiveRemove(num){
@@ -43,14 +42,24 @@ function bannerFunction(){
         xPos1 = 0;
         xpos2 = 0;
         if(index == 4) index = 0;
+        switch(index){
+            case 0: video.currentTime = 19;
+            break;
+            case 1: video.currentTime = 113;
+            break;
+            case 2: video.currentTime = 159;
+            break;
+            case 3: video.currentTime = 49;
+            break;
+        }
 }
 function draw(){
-    // void ctx.drawImage(image, 
+    // ctx.drawImage(image, 
     // sx(원본 x위치), sy(원본 y위치), sWidth(그려지길 원하는 위드값), sHeight(그려지길 원하는 하이트값), 
     // dx(캔버스 x위치), dy(캔버스 y위치), dWidth(그려지는 위드값), dHeight(그려지는 하이트값));
-    const canvas_left_prev = document.querySelector(".main_video .canvas_left.prev");
+    const canvas_left_prev = document.querySelector(".main_video .cvs");
     const context = canvas_left_prev.getContext("2d");
-    
+
     left_endpoint = ( windowWidth / 2 ) + 240 * ( num - 2 );
     right_startpoint = left_endpoint;
     
@@ -68,7 +77,6 @@ function draw(){
     requestAnimationFrame(draw);
 }
 
-
 //banner 영상 재생시간 및 타이머 시간 7초!-------------------------
 let loop1 = setInterval(bannerFunction, 7000);
 bannerActiveAdd(0);
@@ -81,6 +89,3 @@ for(let i = 0; i < banner.length; i++){
     });
 }
 draw();
-
-
-

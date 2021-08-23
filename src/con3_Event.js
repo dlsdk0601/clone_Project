@@ -3,7 +3,6 @@ const con3_next_btn = document.querySelector(".con3 .swiper-button-next");
 const con3_cursor = document.querySelector("#con3_cursor");
 const con3_arr_left = document.querySelector("#con3_cursor .con3_arr_left");
 const con3_arr_right = document.querySelector("#con3_cursor .con3_arr_right");
-let meta;
 const sub_title_el = document.querySelector(".con3 .right_content .subs h2");
 const sub_text_el = document.querySelector(".con3 .right_content .subs .subs_text");
 const sub_color_text_el = document.querySelector(".con3 .right_content .color_font");
@@ -17,12 +16,13 @@ const sub_color_text = ["차별화된 제품개발 기술과 신소재 발굴로
 "홍삼의 피부효능 연구와 차별화된 제품개발로 뷰티시장을 이끕니다.",
 "해외 수출제품 개발과 현지연구로 명품의 가치를 세계에 전파합니다."];
 const color_className = ["#B97924", "#438DB0", "#7C9E46", "#D15C3F", "#D15C3F"];
-let text_loop_num = 0;
+let text_loop_num = 0
+
 
 //text animation
-sub_title_el.classList.add("up");
-sub_text_el.classList.add("up");
-sub_color_text_el.classList.add("up");
+// sub_title_el.classList.add("up");
+// sub_text_el.classList.add("up");
+// sub_color_text_el.classList.add("up");
 const sub_text_Change = () => {
     sub_title_el.classList.remove("up");
     sub_text_el.classList.remove("up");
@@ -86,10 +86,13 @@ let con3_swiper_right = new Swiper("#right_content", {
 });
 
 //swiper timbar Text put in
-const timer_spans = document.querySelectorAll(".con3 .swiper-container-initialized .swiper-pagination .swiper-pagination-bullet"); 
+const timer_spans = document.querySelectorAll(".con3 .swiper-pagination .swiper-pagination-bullet"); 
+//이거 여기 이 행 아닌곳에 쓰면 안잡힘.
 for(let i = 0; i < timer_spans.length; i++){
     timer_spans[i].textContent = timer_name[i];
 }
+console.log(timer_spans);
+
 
 //arrow image
 con3_prev_btn.addEventListener("mouseenter", () => {
@@ -123,3 +126,5 @@ con3_prev_btn.addEventListener("mousemove", (e) => {
     con3_arr_left.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) rotate(-45deg) `;
 });
 
+
+// window.addEventListener('DOMContentLoaded', function(){});

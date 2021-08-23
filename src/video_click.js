@@ -8,8 +8,6 @@ const slide_width_tag = document.querySelector('.con5 .slide_wrap .slide_box');
 const slideWidth  = slide_width_tag.offsetWidth; 
 const slideSpeed = 300; 
 const startNum = 0; 
-slideList.style.width = slideWidth * (slideLen + 2) + "px";
-slideList.style.transform = "translate3d(-" + (slideWidth * (startNum + 1)) + "px, 0px, 0px)";
 const title1 = document.querySelectorAll(".con5 .con5_frame .video_frame .title1");
 const title2 = document.querySelectorAll(".con5 .con5_frame .video_frame .title2");
 const indigate_bar = document.querySelectorAll(".con5 .con5_frame .video_frame .indigate div");
@@ -22,11 +20,15 @@ const con5_cursor_img_right = document.querySelector('#con5_cursor .arr_right');
 const con5_href_box = document.querySelectorAll('.con5 .con5_frame .video_frame .href_box div');
 const con5_title =  document.querySelector(".con5 h2");
 const hide_box = document.querySelector(".con5 .con5_frame .video_frame .hide_box");
+slideList.style.width = slideWidth * (slideLen + 2) + "px";
+slideList.style.transform = "translate3d(-" + (slideWidth * (startNum + 1)) + "px, 0px, 0px)";
+
 // Copy first and last slide
 let firstChild = slideList.firstElementChild;
 let lastChild = slideList.lastElementChild;
 let clonedFirst = firstChild.cloneNode(true);
 let clonedLast = lastChild.cloneNode(true);
+
 // Add copied Slides
 slideList.appendChild(clonedFirst);
 slideList.insertBefore(clonedLast, slideList.firstElementChild);

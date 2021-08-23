@@ -989,28 +989,16 @@ main .main_video video {
 }
 
 main .main_video canvas {
-  width: 50%;
+  width: 100%;
   height: 100vh;
-}
-
-main .main_video .canvas_left {
   background: #eee;
   display: block;
   position: absolute;
   left: 0;
   top: 0;
-  width: 0;
   -webkit-transition: width 1s;
   transition: width 1s;
   height: 100vh;
-  z-index: 3;
-}
-
-main .main_video .canvas_left.prev {
-  width: 100%;
-}
-
-main .main_video canvas.prev {
   z-index: 1;
 }
 
