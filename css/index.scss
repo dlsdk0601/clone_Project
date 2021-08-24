@@ -21,6 +21,9 @@ main{
             transition: width 1s;
             height: 100vh;
             z-index: 1;
+            &.next{
+                z-index: 5;
+            }
         }
         .slides{
             height: 100%;
@@ -32,37 +35,37 @@ main{
             a{
                 cursor: pointer;
                 display: block;
-                overflow: hidden;
+                width: 100%;
+                // overflow: hidden;
                 .title{
                     position: absolute;
                     left: 50%; top: 50%;
+                    width: 100%;
                     transform: translate(-50%, -50%);
-                    z-index: 4;
+                    z-index: 200;
                     pointer-events: none;
                     text-align: center;
                     color: #fff;
-                    h1{
-                        display: none;
-                        font-size: 18px;
-                        letter-spacing: .08em;
-                        position: absolute;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        top: -100px;
-                    }
                     h2{
                         font-size: 64px;
+                        width: 100%;
                         line-height: 1.5;
                         letter-spacing: -.025em;
-                        transform: (0, 50px);
+                        transform: translate(0, 50px);
                         opacity: 0;
-                        visibility: hidden;
+                        transition: .5s;
+                        z-index: 200;
+                        &.on{
+                            opacity: 1;
+                            transform: translate(0, 0);
+                        }
                     }
                 }
                 .banner{
                     position: absolute;
                     left: 50%; height: 100%; 
                     width: 240px;
+                    z-index: 50;
                     .back{
                         width: 0;
                         right: 0; left: auto;
@@ -478,7 +481,6 @@ main{
                     width: 0;
                     height: 2px;
                     background: rgba($color: #000, $alpha: 0.8);
-                    
                 }
                 .swiper-pagination-bullet.swiper-pagination-bullet-active::after{
                     width: 100%;
@@ -599,60 +601,50 @@ main{
                 }
             }
             .subs{
-                h2{
-                    font-size: 36px;
-                    text-align: center;
-                    margin-bottom: 30px;
-                    opacity: 0;
-                    transform: translateY(20px);
-                    transition: 0.5s;
-                    transition-delay: 0;
-                    &.up{
-                        opacity: 1;
-                        transform: translateY(0);
+                width: 100%; height: 100%;
+                position: relative;
+                .txt{
+                    position: absolute;
+                    left: 50%; top: 50%;
+                    transform: translate(-50%, -50%);
+                    h2{
+                        font-size: 36px;
+                        text-align: center;
+                        margin-bottom: 30px;
+                        transform: translateY(20px);
+                        opacity: 0;
+                    }
+                    .subs_text{
+                        text-align: center;
+                        margin-bottom: 10px;
+                        font-size: 18px;
+                        transform: translateY(20px);
+                        opacity: 0;
+                    }
+                    .color_font{
+                        font-size: 18px;
+                        text-align: center;
+                        opacity: 0;
+                        transform: translateY(20px);
+                        opacity: 0;
+                        &.txt-0{
+                            color: #B97924;
+                        }
+                        &.txt-1{
+                            color: #438DB0;
+                        }
+                        &.txt-2{
+                            color: #7C9E46;
+                        }
+                        &.txt-3{
+                            color: #D15C3F;
+                        }
+                        &.txt-4{
+                            color: #D15C3F;
+                        }
                     }
                 }
-                p{
-                    text-align: center;
-                    margin-bottom: 10px;
-                    font-size: 18px;
-                    opacity: 0;
-                    transform: translateY(20px);
-                    transition: 0.5s;
-                    transition-delay: .2s;
-                    &.up{
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
-                }
-                .color_font{
-                    font-size: 18px;
-                    text-align: center;
-                    color: #B97924;
-                    opacity: 0;
-                    transform: translateY(20px);
-                    transition: 0.5s;
-                    transition-delay: .4s;
-                    &.up{
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
-                }
-                p.product{
-                    color: #B97924;
-                }
-                p.effect{
-                    color: #438DB0;
-                }
-                p.analy{
-                    color: #7C9E46;
-                }
-                p.cosmetic{
-                    color: #D15C3F;
-                }
-                p.global{
-                    color: #D15C3F;
-                }
+                
                 .more_box{
                     margin: 40px auto;
                     width: 20%; 
