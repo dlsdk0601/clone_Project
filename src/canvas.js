@@ -21,9 +21,7 @@ let xpos2 = 0;
 video.currentTime = 19;
 
 //Function-----------------------------------------------
-function intro(){
-    
-}
+
 function bannerActiveRemove(num){
     if(num != null) {
         banner_background[num].classList.remove("active");
@@ -59,12 +57,15 @@ function bannerFunction(){
             case 3: video.currentTime = 49;
             break;
         }
+        // drawing();
 }
 function draw(){
     // ctx.drawImage(image, 
     // sx(원본 x위치), sy(원본 y위치), sWidth(그려지길 원하는 위드값), sHeight(그려지길 원하는 하이트값), 
     // dx(캔버스 x위치), dy(캔버스 y위치), dWidth(그려지는 위드값), dHeight(그려지는 하이트값));
-    const canvas_left_prev = document.querySelector(".main_video .next");
+    const canvas_left_prev = document.querySelector(".main_video .cvs");
+    canvas_left_prev.classList.remove("next");
+    canvas_left_prev.classList.add("prev");
     const context = canvas_left_prev.getContext("2d");
 
     left_endpoint = ( windowWidth / 2 ) + 240 * ( num - 2 );
@@ -83,8 +84,9 @@ function draw(){
     }
     requestAnimationFrame(draw);
 }
-
+draw();
 function drawing(){
+    const prevCanvas = document.querySelector("canvas.prev");
     const newCanvas = document.createElement("canvas");
     newCanvas.textContent = "이 브라우저는 캔버스를 지원하지 않습니다";
     newCanvas.id = "cvs";
@@ -93,8 +95,9 @@ function drawing(){
     newCanvas.width = 1920;
     newCanvas.height = 1080;
     con1.prepend(newCanvas);
-
-
+    setTimeout(() => {
+        con1.removeChild(prevCanvas);
+    }, 1000);
 }
 
 //banner 영상 재생시간 및 타이머 시간 7초!-------------------------
@@ -109,6 +112,3 @@ for(let i = 0; i < banner.length; i++){
     });
 }
 
-
-
-// DOMContentLoaded

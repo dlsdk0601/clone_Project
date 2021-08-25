@@ -1,6 +1,6 @@
 'use strict';
 
-const con3 = document.querySelector(".con3 .right_content .subs .more_box");
+const con3 = document.querySelector(".con3");
 const con3_prev_btn = document.querySelector(".con3 .swiper-button-prev");
 const con3_next_btn = document.querySelector(".con3 .swiper-button-next");
 const con3_cursor = document.querySelector("#con3_cursor");
@@ -9,10 +9,14 @@ const con3_arr_right = document.querySelector("#con3_cursor .con3_arr_right");
 let text_loop_num = 0;
 const timer_name = ["제품", "효능", "분석", "화장품", "글로벌"];
 const txt = document.querySelectorAll(".con3 .right_content .subs .txt");
+const con3_left_content = document.querySelector(".con3 .left_content");
+const con3_right_content = document.querySelector(".con3 .right_content");
+
 
 
 // function
 const sub_text_hide = () => {
+
     const txt_h2_prev = txt[text_loop_num].querySelector("h2");
     const txt_subs_text_prev = txt[text_loop_num].querySelector(".subs_text");
     const txt_color_font_prev = txt[text_loop_num].querySelector(".color_font");
@@ -22,6 +26,7 @@ const sub_text_hide = () => {
     sub.push(txt_subs_text_prev);
     sub.push(txt_color_font_prev);
 
+    
     for(let i = 0; i < 3; i++){
         setTimeout( () => {
             sub[i].style.opacity = 0;
@@ -41,16 +46,18 @@ const sub_text_animation = () => {
     sub.push(txt_subs_text);
     sub.push(txt_color_font);
     
+    if( sub[0].style.opacity == 1 ) return;
     for(let i = 0; i < 3; i++){
         setTimeout( () => {
             sub[i].style.opacity = 1;
             sub[i].style.transform = "translate(0, -20px)";
         }, 300*(i+1));
     }
-
 }
+
 function con3_init(){
     //swiper Event-----------------------------------------------------------------------------
+    sub_text_animation();
     let con3_swiper = new Swiper("#con3_left_content", {
         speed: 500,
         spaceBetween: 0,
@@ -74,15 +81,11 @@ function con3_init(){
         },
     });
 
-    // con3_swiper.on("slideChange", function(){
-        
-    //     sub_text_hide();
-    //     text_loop_num--;
-    //     if(text_loop_num == -1){
-    //         text_loop_num = 4;
-    //     } 
-    //     sub_text_animation();
-    // })
+    con3_swiper.on("slideChange", function(){
+        sub_text_hide();
+        text_loop_num = con3_swiper.realIndex;
+        sub_text_animation();
+    })
 
     let con3_swiper_right = new Swiper("#right_content", {
         speed: 500,
@@ -96,20 +99,15 @@ function con3_init(){
             delay: 7000,
             disableOnInteraction: false,
         },
-        // pagination: {
-        //     el: ".swiper-pagination",
-        //     clickable: true,
-        // },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
     });
-    con3_swiper_right.on("slideChange", function(){
-        sub_text_hide();
-        text_loop_num = con3_swiper_right.realIndex;
-        sub_text_animation();
-    })
 
 
     //swiper timbar Text put in--------------------------------------------------
@@ -156,5 +154,12 @@ con3_prev_btn.addEventListener("mousemove", (e) => {
 
 
 //active
-sub_text_animation();
 con3_init();
+window.addEventListener("scroll", () => {
+    const con3_Top = con3.offsetTop;
+    if( con3_Top - 500 < scrollY){
+        con3_left_content.classList.add("active");
+        con3_right_content.classList.add("active");
+        
+    }
+})

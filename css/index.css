@@ -1618,6 +1618,10 @@ main .con3 .left_content {
   height: 100%;
   position: relative;
   overflow: hidden;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
 }
 
 main .con3 .left_content .swiper-pagination {
@@ -1727,6 +1731,11 @@ main .con3 .left_content .back5 {
   opacity: 0.9;
 }
 
+main .con3 .left_content.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
 main .con3 .swiper-button-prev {
   cursor: none;
   position: absolute;
@@ -1761,6 +1770,10 @@ main .con3 .right_content {
   width: 50%;
   height: 100%;
   z-index: 10;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
 }
 
 main .con3 .right_content .container {
@@ -1814,6 +1827,7 @@ main .con3 .right_content .subs {
 
 main .con3 .right_content .subs .txt {
   position: absolute;
+  width: 100%;
   left: 50%;
   top: -220px;
   -webkit-transform: translate(-50%, 0);
@@ -1924,6 +1938,11 @@ main .con3 .right_content .subs .more_box:hover .more_arrow::before {
 main .con3 .right_content .subs .more_box:hover .more_arrow::after {
   border-top: 2px solid  white;
   border-right: 2px solid white;
+}
+
+main .con3 .right_content.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 main .con4 {

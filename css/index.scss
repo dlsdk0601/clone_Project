@@ -459,6 +459,8 @@ main{
             width: 50%; height: 100%;
             position: relative;
             overflow: hidden;
+            transform: translateX(-100%);
+            transition: .5s ease-in-out;
             .swiper-pagination{
                 position: absolute;
                 width: 100%;
@@ -541,6 +543,9 @@ main{
                 background-size:cover;
                 opacity: 0.9;
             }
+            &.active{
+                transform: translateX(0);
+            }
         }
         .swiper-button-prev{
             cursor: none;
@@ -568,6 +573,8 @@ main{
             width: 50%; 
             height: 100%;
             z-index: 10;
+            transform: translateY(100%);
+            transition: .5s ease-in-out;
             .container{
                 width: 45%; height: 50%;
                 margin: 0 auto;
@@ -605,6 +612,7 @@ main{
                 position: relative;
                 .txt{
                     position: absolute;
+                    width: 100%;
                     left: 50%; top: -220px;
                     transform: translate(-50%, 0);
                     h2{
@@ -689,7 +697,9 @@ main{
                     }
                 }
             }
-            
+            &.active{
+                transform: translateY(0);
+            }
         }
     }
 
