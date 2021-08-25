@@ -1815,36 +1815,36 @@ main .con3 .right_content .subs {
 main .con3 .right_content .subs .txt {
   position: absolute;
   left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  top: -220px;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
 main .con3 .right_content .subs .txt h2 {
   font-size: 36px;
   text-align: center;
   margin-bottom: 30px;
-  -webkit-transform: translateY(20px);
-          transform: translateY(20px);
   opacity: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 main .con3 .right_content .subs .txt .subs_text {
   text-align: center;
   margin-bottom: 10px;
   font-size: 18px;
-  -webkit-transform: translateY(20px);
-          transform: translateY(20px);
   opacity: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 main .con3 .right_content .subs .txt .color_font {
+  width: 100%;
   font-size: 18px;
   text-align: center;
   opacity: 0;
-  -webkit-transform: translateY(20px);
-          transform: translateY(20px);
-  opacity: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 main .con3 .right_content .subs .txt .color_font.txt-0 {
@@ -1868,7 +1868,7 @@ main .con3 .right_content .subs .txt .color_font.txt-4 {
 }
 
 main .con3 .right_content .subs .more_box {
-  margin: 40px auto;
+  margin: 300px auto 20px auto;
   width: 20%;
   border: 2px solid black;
   padding: 14px 60px 14px 20px;

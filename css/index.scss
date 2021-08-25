@@ -605,28 +605,28 @@ main{
                 position: relative;
                 .txt{
                     position: absolute;
-                    left: 50%; top: 50%;
-                    transform: translate(-50%, -50%);
+                    left: 50%; top: -220px;
+                    transform: translate(-50%, 0);
                     h2{
                         font-size: 36px;
                         text-align: center;
                         margin-bottom: 30px;
-                        transform: translateY(20px);
                         opacity: 0;
+                        transition: .5s;
                     }
                     .subs_text{
                         text-align: center;
                         margin-bottom: 10px;
                         font-size: 18px;
-                        transform: translateY(20px);
                         opacity: 0;
+                        transition: .5s;
                     }
                     .color_font{
+                        width: 100%;
                         font-size: 18px;
                         text-align: center;
                         opacity: 0;
-                        transform: translateY(20px);
-                        opacity: 0;
+                        transition: .5s;
                         &.txt-0{
                             color: #B97924;
                         }
@@ -644,9 +644,8 @@ main{
                         }
                     }
                 }
-                
                 .more_box{
-                    margin: 40px auto;
+                    margin: 300px auto 20px auto;
                     width: 20%; 
                     border: 2px solid black;
                     padding: 14px 60px 14px 20px;
